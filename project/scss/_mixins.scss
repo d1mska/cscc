@@ -1,0 +1,15 @@
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+@mixin theme($light-theme: true){
+    @if $light-theme {
+    background: lighten($primary-color, 80%);
+    color: darken($text-color, 80%);
+  } @else {
+    background: darken($primary-color, 50%);
+    color: lighten($text-color, 80%);
+  }
+}

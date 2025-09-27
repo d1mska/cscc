@@ -1,0 +1,99 @@
+
+body{
+    
+    @include flexCenter(column);
+    
+    text-align: center;
+    //width: 75%;
+    margin: 0 auto;
+    background-color: $primary-color;
+    font-weight: map-get($font-weight, normal);
+    @include theme(true);
+}
+.link{
+    color: $text-color;
+    &:hover{
+        font-weight: bold;
+    }
+        @include theme(false);
+
+}
+button{
+    padding: 5px 20px;
+    background-color: white;
+    color: $text-color;
+    font-weight: bold;
+    &:hover{
+        background-color: lightgrey;
+    }
+       // @include theme(false);
+
+}
+.nav-link{
+    font-size: 20px;
+    color: $text-color;
+    padding: 15px;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+        @include theme(false);
+
+}
+.container{
+    background-color: rgb(116, 252, 249);
+    border: 2px solid $text-color;
+    padding: 50px;
+    
+    margin: 2px 0;
+    @include theme(false);
+}
+.site-header{
+    
+   // background-color: $primary-color;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+.site-footer{
+    //background-color: $primary-color;
+    padding: 10px 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    
+}
+.hero{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.btn{
+    
+    padding: 5px 20px;
+    background-color: white;
+    color: $text-color;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover{
+        background-color: lightgrey;
+    }
+       // @include theme(false);
+
+}
+/*.hours{
+    align-items: left;
+    text-align: left;
+}*/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.sidebar {
+    text-align: left;
+}
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
